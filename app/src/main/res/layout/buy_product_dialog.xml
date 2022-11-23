@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorSecondDark">
+
+    <TextView
+        android:id="@+id/textView109"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/anton"
+        android:text="buy product"
+        android:textColor="#CFCFCF"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView113"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:text="amount"
+        android:textColor="#A1A1A1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView109" />
+
+    <EditText
+        android:id="@+id/amount"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:backgroundTint="#979797"
+        android:ems="10"
+        android:inputType="number"
+        android:textColor="#E6E6E6"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/textView113"
+        app:layout_constraintStart_toEndOf="@+id/textView113"
+        app:layout_constraintTop_toTopOf="@+id/textView113" />
+
+    <TextView
+        android:id="@+id/textView114"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="total price:"
+        android:textColor="#A1A1A1"
+        app:layout_constraintStart_toStartOf="@+id/textView113"
+        app:layout_constraintTop_toBottomOf="@+id/amount" />
+
+    <TextView
+        android:id="@+id/total_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="0$"
+        android:textColor="#39FD3C"
+        app:layout_constraintBottom_toBottomOf="@+id/textView114"
+        app:layout_constraintStart_toEndOf="@+id/textView114"
+        app:layout_constraintTop_toTopOf="@+id/textView114" />
+
+    <TextView
+        android:id="@+id/textView116"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="your balance:"
+        android:textColor="#A1A1A1"
+        app:layout_constraintBottom_toBottomOf="@+id/total_price"
+        app:layout_constraintStart_toEndOf="@+id/total_price"
+        app:layout_constraintTop_toTopOf="@+id/total_price" />
+
+    <TextView
+        android:id="@+id/account_balance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="0$"
+        android:textColor="#00BCD4"
+        app:layout_constraintBottom_toBottomOf="@+id/textView116"
+        app:layout_constraintStart_toEndOf="@+id/textView116"
+        app:layout_constraintTop_toTopOf="@+id/textView116" />
+
+    <Button
+        android:id="@+id/purchase"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/login_button"
+        android:fontFamily="sans-serif"
+        android:text="purchase"
+        android:textAllCaps="false"
+        android:textColor="#E1E1E1"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/amount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/amount"
+        app:layout_constraintTop_toTopOf="@+id/amount" />
+
+    <TextView
+        android:id="@+id/warning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="#E62727"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView114" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "752394601819",
+    "firebase_url": "https://finddb-72d87-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "finddb-72d87",
+    "storage_bucket": "finddb-72d87.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:752394601819:android:59ba3af5239ae0ae15c67e",
+        "android_client_info": {
+          "package_name": "com.bagrut.find"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "752394601819-5gtofd3sut6bh83r4pdok1ncprqfpo10.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvkCw36m2vgPl9CFySpXQx7Uh_QL9XQgc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "752394601819-5gtofd3sut6bh83r4pdok1ncprqfpo10.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

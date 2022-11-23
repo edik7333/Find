@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimaryDark">
+
+    <TextView
+        android:id="@+id/textView108"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/anton"
+        android:text="add product"
+        android:textColor="#CFCFCF"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/product_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="#8F8F8F"
+        android:ems="10"
+        android:hint="product name"
+        android:inputType="textPersonName"
+        android:textColor="#BABABA"
+        android:textColorHint="#7A7A7A"
+        app:layout_constraintEnd_toStartOf="@+id/add_picture"
+        app:layout_constraintStart_toStartOf="@+id/product_description"
+        app:layout_constraintTop_toBottomOf="@+id/textView108" />
+
+    <EditText
+        android:id="@+id/product_description"
+        style="@style/Base.Widget.MaterialComponents.AutoCompleteTextView"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/text_box"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="description"
+        android:inputType="textMultiLine"
+        android:textColor="#BABABA"
+        android:textColorHint="#7A7A7A"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/product_name" />
+
+    <EditText
+        android:id="@+id/product_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#8F8F8F"
+        android:ems="10"
+        android:hint="price"
+        android:inputType="numberDecimal"
+        android:textColor="#BABABA"
+        android:textColorHint="#7A7A7A"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/product_description"
+        app:layout_constraintTop_toBottomOf="@+id/product_description" />
+
+    <Button
+        android:id="@+id/publish_product"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:background="@drawable/login_button"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="publish"
+        android:textAllCaps="false"
+        android:textColor="#E1E1E1"
+        app:layout_constraintBottom_toBottomOf="@+id/product_price"
+        app:layout_constraintEnd_toEndOf="@+id/product_description"
+        app:layout_constraintStart_toEndOf="@+id/product_price"
+        app:layout_constraintTop_toTopOf="@+id/product_price" />
+
+    <Button
+        android:id="@+id/add_picture"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/ic_baseline_add_photo_alternate_24"
+        app:layout_constraintBottom_toBottomOf="@+id/product_name"
+        app:layout_constraintEnd_toEndOf="@+id/product_description"
+        app:layout_constraintTop_toTopOf="@+id/product_name" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/reset_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".ResetPass">
+
+    <EditText
+        android:id="@+id/emailReset"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginEnd="64dp"
+        android:backgroundTint="#8E8E8E"
+        android:ems="10"
+        android:hint="email to reset"
+        android:inputType="textEmailAddress"
+        android:textColor="#AEAEAE"
+        android:textColorHint="#8E8E8E"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.453" />
+
+    <Button
+        android:id="@+id/sendReset"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:background="@drawable/reset_button"
+        android:text="send email"
+        android:textColor="#E4E4E4"
+        app:layout_constraintEnd_toEndOf="@+id/emailReset"
+        app:layout_constraintStart_toStartOf="@+id/emailReset"
+        app:layout_constraintTop_toBottomOf="@+id/emailReset" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/buttom_buttons_at_login"
+        android:onClick="toMain"
+        android:text="Return to login"
+        android:textAllCaps="false"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/cancel_reset"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="52dp"
+        android:background="@drawable/no_background"
+        android:text="@string/cancel_reset_pass"
+        android:textAllCaps="false"
+        android:textColor="#B1B1B1"
+        app:layout_constraintStart_toStartOf="@+id/emailReset"
+        app:layout_constraintTop_toBottomOf="@+id/emailReset" />
+</androidx.constraintlayout.widget.ConstraintLayout>

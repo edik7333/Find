@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/container_for_product_list">
+
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="298dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="fdgfdfdkjjdsfjhskfhjksdjkfhkdshkdfhshksfhkjsdjksdhkfjshkdfhkshfjhkjsdhkjsdhjkdshkjhsdfjkhksdhksdjksdkjhfskhsdfhkjsdhdsfa"
+        android:textColor="#D3D3D3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/reviewerName"
+        app:layout_constraintTop_toBottomOf="@+id/reviewerName" />
+
+    <TextView
+        android:id="@+id/reviewerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="reviewerName"
+        android:textColor="#7C7C7C"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/publishDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="publishDate"
+        android:textColor="#8A8A8A"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/reviewerName" />
+
+    <Button
+        android:id="@+id/upVote"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/ic_baseline_keyboard_arrow_up_24"
+        app:layout_constraintEnd_toEndOf="@+id/publishDate"
+        app:layout_constraintTop_toBottomOf="@+id/publishDate" />
+
+    <TextView
+        android:id="@+id/votes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="@color/darkPrimaryText"
+        app:layout_constraintEnd_toEndOf="@+id/upVote"
+        app:layout_constraintStart_toStartOf="@+id/upVote"
+        app:layout_constraintTop_toBottomOf="@+id/upVote" />
+
+    <Button
+        android:id="@+id/downVote"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/ic_baseline_keyboard_arrow_down_24"
+        app:layout_constraintEnd_toEndOf="@+id/upVote"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/upVote"
+        app:layout_constraintTop_toBottomOf="@+id/votes" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

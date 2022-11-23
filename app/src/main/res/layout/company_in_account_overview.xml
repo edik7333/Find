@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimaryDark">
+
+    <TextView
+        android:id="@+id/companyName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="company name"
+        android:textColor="@color/darkPrimaryText"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="0dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="TextView"
+        android:textColor="@color/darkSecondText"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/textView38"
+        app:layout_constraintStart_toStartOf="@+id/companyName"
+        app:layout_constraintTop_toBottomOf="@+id/companyName" />
+
+    <TextView
+        android:id="@+id/textView39"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="daily PnL:"
+        android:textColor="#CDCDCD"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/upDownIcon"
+        app:layout_constraintEnd_toStartOf="@+id/dailyPnL"
+        app:layout_constraintTop_toTopOf="@+id/upDownIcon" />
+
+    <TextView
+        android:id="@+id/upDownIcon"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/ic_baseline_remove_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/companyName" />
+
+    <TextView
+        android:id="@+id/dailyPnL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="0$"
+        android:textColor="#CDCDCD"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/upDownIcon"
+        app:layout_constraintEnd_toStartOf="@+id/dailyPnLChange"
+        app:layout_constraintTop_toTopOf="@+id/upDownIcon" />
+
+    <TextView
+        android:id="@+id/dailyPnLChange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0%"
+        android:textColor="@color/darkSecondText"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/upDownIcon"
+        app:layout_constraintEnd_toStartOf="@+id/upDownIcon"
+        app:layout_constraintTop_toTopOf="@+id/upDownIcon" />
+
+    <View
+        android:id="@+id/divider4"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="8dp"
+        android:background="?android:attr/listDivider"
+        android:backgroundTint="#CCCCCC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/description" />
+
+    <Button
+        android:id="@+id/toCompanyPage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/no_background"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView42"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="own:"
+        android:textColor="#C1C1C1"
+        app:layout_constraintBottom_toBottomOf="@+id/own"
+        app:layout_constraintEnd_toStartOf="@+id/own"
+        app:layout_constraintTop_toTopOf="@+id/own" />
+
+    <TextView
+        android:id="@+id/own"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="4dp"
+        android:text="0%"
+        android:textColor="#00BCD4"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/divider4"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textView37"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="total assets:"
+        android:textColor="#CDCDCD"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView39"
+        app:layout_constraintTop_toBottomOf="@+id/textView39" />
+
+    <TextView
+        android:id="@+id/total_assets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0$"
+        android:textColor="#CDCDCD"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView37"
+        app:layout_constraintEnd_toEndOf="@+id/dailyPnL"
+        app:layout_constraintStart_toStartOf="@+id/dailyPnL"
+        app:layout_constraintTop_toTopOf="@+id/textView37" />
+
+    <TextView
+        android:id="@+id/textView38"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="products for sell:"
+        android:textColor="#CDCDCD"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView37"
+        app:layout_constraintTop_toBottomOf="@+id/textView37" />
+
+    <TextView
+        android:id="@+id/product_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="#01E479"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView38"
+        app:layout_constraintEnd_toEndOf="@+id/total_assets"
+        app:layout_constraintStart_toStartOf="@+id/total_assets"
+        app:layout_constraintTop_toTopOf="@+id/textView38" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

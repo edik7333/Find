@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#202020"
+    tools:context=".AccountSettings">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/delete_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/delete_account_background"
+            android:elevation="5dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="Delete Account"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="16dp"
+            android:background="@color/colorPrimaryDark"
+            android:elevation="1dp"
+            app:layout_constraintBottom_toTopOf="@+id/delete_account"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/account"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/account_details"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/show_account">
+
+                        <TextView
+                            android:id="@+id/textView71"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="email:"
+                            android:textColor="#8E8E8E"
+                            app:layout_constraintStart_toStartOf="@+id/textView66"
+                            app:layout_constraintTop_toBottomOf="@+id/gender" />
+
+                        <RadioGroup
+                            android:id="@+id/gender"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:orientation="horizontal"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/textView69"
+                            app:layout_constraintTop_toBottomOf="@+id/textView67">
+
+                            <RadioButton
+                                android:id="@+id/male"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:buttonTint="#8E8E8E"
+                                android:text="male"
+                                android:textColor="#8E8E8E"
+                                android:textSize="12sp" />
+
+                            <RadioButton
+                                android:id="@+id/female"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:buttonTint="#8E8E8E"
+                                android:text="female"
+                                android:textColor="#8E8E8E"
+                                android:textSize="12sp" />
+
+                            <RadioButton
+                                android:id="@+id/other"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:buttonTint="#8E8E8E"
+                                android:text="other"
+                                android:textColor="#8E8E8E"
+                                android:textSize="12sp" />
+                        </RadioGroup>
+
+                        <View
+                            android:id="@+id/divider11"
+                            android:layout_width="0dp"
+                            android:layout_height="2dp"
+                            android:background="#A6A6A6"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                        <TextView
+                            android:id="@+id/textView67"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="last name:"
+                            android:textColor="#8E8E8E"
+                            app:layout_constraintStart_toStartOf="@+id/textView66"
+                            app:layout_constraintTop_toBottomOf="@+id/textView66" />
+
+                        <TextView
+                            android:id="@+id/textView72"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="phone:"
+                            android:textColor="#8E8E8E"
+                            app:layout_constraintStart_toStartOf="@+id/textView66"
+                            app:layout_constraintTop_toBottomOf="@+id/textView71" />
+
+                        <EditText
+                            android:id="@+id/fname"
+                            style="@style/account_settings_input_text"
+                            app:layout_constraintBottom_toBottomOf="@+id/textView66"
+                            app:layout_constraintStart_toEndOf="@+id/textView66"
+                            app:layout_constraintTop_toTopOf="@+id/textView66" />
+
+                        <TextView
+                            android:id="@+id/textView66"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginTop="16dp"
+                            android:text="first name:"
+                            android:textColor="#8E8E8E"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/textView69"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="gender:"
+                            android:textColor="#8E8E8E"
+                            app:layout_constraintBottom_toBottomOf="@+id/gender"
+                            app:layout_constraintStart_toStartOf="@+id/textView67"
+                            app:layout_constraintTop_toTopOf="@+id/gender" />
+
+                        <EditText
+                            android:id="@+id/lname"
+                            style="@style/account_settings_input_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:inputType="textPersonName"
+                            app:layout_constraintBottom_toBottomOf="@+id/textView67"
+                            app:layout_constraintStart_toEndOf="@+id/textView67"
+                            app:layout_constraintTop_toTopOf="@+id/textView67" />
+
+                        <EditText
+                            android:id="@+id/email"
+                            style="@style/account_settings_input_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:inputType="textEmailAddress"
+                            app:layout_constraintBottom_toBottomOf="@+id/textView71"
+                            app:layout_constraintStart_toEndOf="@+id/textView71"
+                            app:layout_constraintTop_toTopOf="@+id/textView71" />
+
+                        <EditText
+                            android:id="@+id/phone"
+                            style="@style/account_settings_input_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:inputType="phone"
+                            app:layout_constraintBottom_toBottomOf="@+id/textView72"
+                            app:layout_constraintStart_toEndOf="@+id/textView72"
+                            app:layout_constraintTop_toTopOf="@+id/textView72" />
+
+                        <Button
+                            android:id="@+id/update_account_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="16dp"
+                            android:background="@drawable/login_button"
+                            android:paddingLeft="5dp"
+                            android:paddingTop="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="update account"
+                            android:textAllCaps="false"
+                            android:textColor="@color/darkPrimaryText"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.498"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textView72" />
+
+                        <ProgressBar
+                            android:id="@+id/update_account_progress"
+                            style="?android:attr/progressBarStyle"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginStart="8dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/update_account_button"
+                            app:layout_constraintStart_toEndOf="@+id/update_account_button"
+                            app:layout_constraintTop_toTopOf="@+id/update_account_button" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <Button
+                        android:id="@+id/show_account"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:background="@drawable/no_background"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView64"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/ic_baseline_keyboard_arrow_down_24"
+                        app:layout_constraintBottom_toBottomOf="@+id/show_account"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/show_account" />
+
+                    <TextView
+                        android:id="@+id/textView65"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="account"
+                        android:textColor="#BCBCBC"
+                        app:layout_constraintBottom_toBottomOf="@+id/show_account"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/show_account" />
+
+                    <View
+                        android:id="@+id/divider10"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:background="#494949"
+                        app:layout_constraintBottom_toTopOf="@+id/account_details"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        android:id="@+id/show_funds"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:background="@drawable/no_background"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView80"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="funds"
+                        android:textColor="#BCBCBC"
+                        app:layout_constraintBottom_toBottomOf="@+id/show_funds"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/show_funds" />
+
+                    <TextView
+                        android:id="@+id/textView81"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/ic_baseline_keyboard_arrow_down_24"
+                        app:layout_constraintBottom_toBottomOf="@+id/show_funds"
+                        app:layout_constraintEnd_toEndOf="@+id/show_funds"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:id="@+id/divider12"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:background="#494949"
+                        app:layout_constraintBottom_toBottomOf="@+id/show_funds"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/funds_details"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/divider12">
+
+                        <TextView
+                            android:id="@+id/textView88"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:background="@drawable/ic_baseline_compare_arrows_24"
+                            android:elevation="3dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/transfer_funds_button"
+                            app:layout_constraintStart_toStartOf="@+id/transfer_funds_button"
+                            app:layout_constraintTop_toTopOf="@+id/transfer_funds_button" />
+
+                        <Button
+                            android:id="@+id/transfer_funds_button"
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:background="@drawable/simple_round_ractangle_button"
+                            android:text="transfer funds"
+                            android:textAllCaps="false"
+                            android:textColor="#D6D6D6"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.164"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <View
+                            android:id="@+id/divider16"
+                            android:layout_width="0dp"
+                            android:layout_height="2dp"
+                            android:background="#A6A6A6"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

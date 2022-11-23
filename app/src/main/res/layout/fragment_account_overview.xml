@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".AccountOverview" >
+
+    <ScrollView
+        android:id="@+id/scroll_account_overview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/account_finance"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#2C2C2C">
+
+                <View
+                    android:id="@+id/divider2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/darkSecondText"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="daily expenditures:"
+                    android:textColor="@color/darkPrimaryText"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/daily_expanse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="0"
+                    android:textColor="@color/darkPrimaryText"
+                    app:layout_constraintStart_toEndOf="@+id/textView18"
+                    app:layout_constraintTop_toTopOf="@+id/textView18" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/owned_companies_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/companies_owned_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/textView26"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="16dp"
+                        android:text="last month PnL:"
+                        android:textColor="@color/darkPrimaryText"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/textView23"
+                        app:layout_constraintTop_toBottomOf="@+id/textView23" />
+
+                    <TextView
+                        android:id="@+id/textView23"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="16dp"
+                        android:text="companies:"
+                        android:textColor="@color/darkPrimaryText"
+                        app:layout_constraintStart_toStartOf="@+id/textView22"
+                        app:layout_constraintTop_toBottomOf="@+id/textView22" />
+
+                    <TextView
+                        android:id="@+id/textView24"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="money invested:"
+                        android:textColor="@color/darkPrimaryText"
+                        app:layout_constraintStart_toStartOf="@+id/hj"
+                        app:layout_constraintTop_toBottomOf="@+id/hj" />
+
+                    <TextView
+                        android:id="@+id/last_month_pnl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="0"
+                        android:textColor="#B5B5B5"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView26"
+                        app:layout_constraintStart_toEndOf="@+id/textView26"
+                        app:layout_constraintTop_toTopOf="@+id/textView26" />
+
+                    <TextView
+                        android:id="@+id/companies_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="0"
+                        android:textColor="#B5B5B5"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView23"
+                        app:layout_constraintStart_toEndOf="@+id/textView23"
+                        app:layout_constraintTop_toTopOf="@+id/textView23" />
+
+                    <TextView
+                        android:id="@+id/invested_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="0"
+                        android:textColor="#B5B5B5"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView24"
+                        app:layout_constraintStart_toEndOf="@+id/textView24"
+                        app:layout_constraintTop_toTopOf="@+id/textView24" />
+
+                    <TextView
+                        android:id="@+id/last_daily"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="0"
+                        android:textColor="#B5B5B5"
+                        app:layout_constraintBottom_toBottomOf="@+id/hj"
+                        app:layout_constraintStart_toEndOf="@+id/hj"
+                        app:layout_constraintTop_toTopOf="@+id/hj" />
+
+                    <TextView
+                        android:id="@+id/hj"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="last daily PnL:"
+                        android:textColor="@color/darkPrimaryText"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.41"
+                        app:layout_constraintStart_toEndOf="@+id/companies_count"
+                        app:layout_constraintTop_toTopOf="@+id/textView23" />
+
+                    <TextView
+                        android:id="@+id/textView22"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:text="companies owned"
+                        android:textColor="#808080"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:id="@+id/divider3"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="?android:attr/listDivider"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <Button
+                    android:id="@+id/ownedCompButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/simple_round_ractangle_button"
+                    android:elevation="2dp"
+                    android:text="companies owned"
+                    android:textAllCaps="false"
+                    android:textColor="@color/darkPrimaryText"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/companies_owned_info" />
+
+                <Button
+                    android:id="@+id/add_company"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/ic_baseline_add_24_blue"
+                    android:elevation="3dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/ownedCompButton"
+                    app:layout_constraintEnd_toEndOf="@+id/ownedCompButton"
+                    app:layout_constraintTop_toTopOf="@+id/ownedCompButton" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/ownedCompList"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ownedCompButton" />
+
+                <TextView
+                    android:id="@+id/textView73"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/ic_baseline_business_24"
+                    android:elevation="3dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/ownedCompButton"
+                    app:layout_constraintStart_toStartOf="@+id/ownedCompButton"
+                    app:layout_constraintTop_toBottomOf="@+id/companies_owned_info" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>
